@@ -1,0 +1,15 @@
+F:\programming\Block Game\Block Game\bin\Debug\Block Game.exe
+F:\programming\Block Game\Block Game\bin\Debug\Block Game.pdb
+F:\programming\Block Game\Block Game\bin\Debug\Block Game.xml
+F:\programming\Block Game\Block Game\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Resources.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\programming\Block Game\Block Game\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.exe
+F:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.xml
+F:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.pdb
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_1.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Main_Menu.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_2.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_3.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_4.resources
