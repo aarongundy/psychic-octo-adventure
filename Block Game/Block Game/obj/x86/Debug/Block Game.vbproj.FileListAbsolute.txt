@@ -13,3 +13,64 @@ F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Main_Menu
 F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_2.resources
 F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_3.resources
 F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_4.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_5.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_6.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\Interop.WMPLib.dll
+F:\programming\Block Game\Block Game\obj\x86\Debug\AxInterop.WMPLib.dll
+F:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.vbproj.ResolveComReference.cache
+F:\programming\Block Game\Block Game\bin\Debug\Interop.WMPLib.dll
+F:\programming\Block Game\Block Game\bin\Debug\AxInterop.WMPLib.dll
+E:\programming\Block Game\Block Game\obj\x86\Debug\Interop.WMPLib.dll
+E:\programming\Block Game\Block Game\obj\x86\Debug\AxInterop.WMPLib.dll
+E:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.vbproj.ResolveComReference.cache
+E:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.exe
+E:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.xml
+E:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.pdb
+E:\programming\Block Game\Block Game\bin\Debug\Block Game.exe
+E:\programming\Block Game\Block Game\bin\Debug\Block Game.pdb
+E:\programming\Block Game\Block Game\bin\Debug\Block Game.xml
+E:\programming\Block Game\Block Game\bin\Debug\Interop.WMPLib.dll
+E:\programming\Block Game\Block Game\bin\Debug\AxInterop.WMPLib.dll
+E:\programming\Block Game\Block Game\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_3.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_4.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_5.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_6.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Main_Menu.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_2.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_1.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Resources.resources
+E:\programming\Block Game\Block Game\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\programming\Block Game\Block Game\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\programming\Block Game\Block Game\bin\Debug\NAudio.dll
+F:\programming\Block Game\Block Game\bin\Debug\NAudio.WindowsMediaFormat.dll
+F:\programming\Block Game\Block Game\bin\Debug\NAudio.xml
+G:\programming\Block Game\Block Game\obj\x86\Debug\Interop.WMPLib.dll
+G:\programming\Block Game\Block Game\obj\x86\Debug\AxInterop.WMPLib.dll
+G:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.vbproj.ResolveComReference.cache
+G:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.exe
+G:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.xml
+G:\programming\Block Game\Block Game\obj\x86\Debug\Block Game.pdb
+F:\programming\Block Game\Block Game\bin\Debug\Block Game.exe.config
+G:\programming\Block Game\Block Game\bin\Debug\Block Game.exe.config
+G:\programming\Block Game\Block Game\bin\Debug\Block Game.exe
+G:\programming\Block Game\Block Game\bin\Debug\Block Game.pdb
+G:\programming\Block Game\Block Game\bin\Debug\Block Game.xml
+G:\programming\Block Game\Block Game\bin\Debug\NAudio.xml
+G:\programming\Block Game\Block Game\bin\Debug\Interop.WMPLib.dll
+G:\programming\Block Game\Block Game\bin\Debug\AxInterop.WMPLib.dll
+G:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Main_Menu.resources
+G:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Resources.resources
+G:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.UserPick.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.UserPick.resources
+G:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Delete_User.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Delete_User.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Main_Menu2.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level.resources
+G:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level.resources
+F:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_Design.resources
+G:\programming\Block Game\Block Game\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Level_Design.resources
+G:\programming\Block Game\Block Game\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\programming\Block Game\Block Game\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\programming\Block Game\Block Game\obj\x86\Debug\WindowsApplication1.Design_Output.resources

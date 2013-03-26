@@ -1,0 +1,59 @@
+Level:4
+
+For i = 1 To 18
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 22 To 26
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 30 To 34
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 38 To 63
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+startingSquare = 18
+winningSquare = 37
+-------------------------
+Level:5
+
+For i = 1 To 10
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 14 To 19
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 22 To 29
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 30 To 37
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 38 To 45
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+For i = 47 To 64
+	Lbl_Array(i).Visible = False
+	Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+Next
+
+startingSquare = 9
+winningSquare = 46
