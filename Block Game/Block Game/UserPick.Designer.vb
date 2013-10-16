@@ -22,25 +22,16 @@ Partial Class UserPick
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnExit = New System.Windows.Forms.Button()
         Me.btnNewPlayer = New System.Windows.Forms.Label()
         Me.lblDelete_Player = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Master_UserSlot = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnDesign = New System.Windows.Forms.Button()
+        Me.lblExit = New System.Windows.Forms.Label()
+        Me.lblDesign = New System.Windows.Forms.Label()
+        Me.lblHowTo = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnExit
-        '
-        Me.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnExit.Location = New System.Drawing.Point(443, 288)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 7
-        Me.btnExit.Text = "E&xit"
-        Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnNewPlayer
         '
@@ -93,32 +84,71 @@ Partial Class UserPick
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(170, 288)
+        Me.Label3.Location = New System.Drawing.Point(28, 288)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Label3"
+        Me.Label3.Visible = False
         '
-        'btnDesign
+        'lblExit
         '
-        Me.btnDesign.Location = New System.Drawing.Point(315, 288)
-        Me.btnDesign.Name = "btnDesign"
-        Me.btnDesign.Size = New System.Drawing.Size(75, 23)
-        Me.btnDesign.TabIndex = 19
-        Me.btnDesign.Text = "Design Levels"
-        Me.btnDesign.UseVisualStyleBackColor = True
+        Me.lblExit.AutoSize = True
+        Me.lblExit.BackColor = System.Drawing.Color.Blue
+        Me.lblExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblExit.ForeColor = System.Drawing.Color.Fuchsia
+        Me.lblExit.Location = New System.Drawing.Point(390, 285)
+        Me.lblExit.MinimumSize = New System.Drawing.Size(115, 20)
+        Me.lblExit.Name = "lblExit"
+        Me.lblExit.Size = New System.Drawing.Size(115, 20)
+        Me.lblExit.TabIndex = 21
+        Me.lblExit.Text = "Exit"
+        Me.lblExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblDesign
+        '
+        Me.lblDesign.AutoSize = True
+        Me.lblDesign.BackColor = System.Drawing.Color.Blue
+        Me.lblDesign.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDesign.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDesign.ForeColor = System.Drawing.Color.Fuchsia
+        Me.lblDesign.Location = New System.Drawing.Point(248, 285)
+        Me.lblDesign.MinimumSize = New System.Drawing.Size(115, 20)
+        Me.lblDesign.Name = "lblDesign"
+        Me.lblDesign.Size = New System.Drawing.Size(115, 20)
+        Me.lblDesign.TabIndex = 22
+        Me.lblDesign.Text = "Design"
+        Me.lblDesign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHowTo
+        '
+        Me.lblHowTo.AutoSize = True
+        Me.lblHowTo.BackColor = System.Drawing.Color.Blue
+        Me.lblHowTo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblHowTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHowTo.ForeColor = System.Drawing.Color.Fuchsia
+        Me.lblHowTo.Location = New System.Drawing.Point(114, 285)
+        Me.lblHowTo.MinimumSize = New System.Drawing.Size(115, 20)
+        Me.lblHowTo.Name = "lblHowTo"
+        Me.lblHowTo.Size = New System.Drawing.Size(115, 20)
+        Me.lblHowTo.TabIndex = 23
+        Me.lblHowTo.Text = "How To"
+        Me.lblHowTo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'UserPick
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(530, 323)
-        Me.Controls.Add(Me.btnDesign)
+        Me.Controls.Add(Me.lblHowTo)
+        Me.Controls.Add(Me.lblDesign)
+        Me.Controls.Add(Me.lblExit)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lblDelete_Player)
         Me.Controls.Add(Me.btnNewPlayer)
-        Me.Controls.Add(Me.btnExit)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "UserPick"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserPick"
@@ -128,11 +158,12 @@ Partial Class UserPick
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnNewPlayer As System.Windows.Forms.Label
     Friend WithEvents lblDelete_Player As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Master_UserSlot As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnDesign As System.Windows.Forms.Button
+    Friend WithEvents lblExit As System.Windows.Forms.Label
+    Friend WithEvents lblDesign As System.Windows.Forms.Label
+    Friend WithEvents lblHowTo As System.Windows.Forms.Label
 End Class

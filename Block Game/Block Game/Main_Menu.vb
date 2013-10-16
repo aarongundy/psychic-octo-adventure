@@ -87,4 +87,8 @@
 
         fileReader.Close()
     End Sub
+
+    Private Sub lblExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblExit.Click
+        End
+    End Sub
 End Class

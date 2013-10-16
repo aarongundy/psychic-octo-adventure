@@ -9,10 +9,6 @@ Public Class UserPick
     Dim userLabelArray As Label() = New Label(4) {}
     Dim namesArray As New ArrayList
 
-    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
-        End
-    End Sub
-
     Private Sub UserPick_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim i As Integer
         Dim X, Y, W, H, CNT As Integer
@@ -132,9 +128,25 @@ Public Class UserPick
         End If
     End Sub
 
-    Private Sub btnDesign_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDesign.Click
+    Private Sub btnHowTo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim Howto As New Howto
+        Me.Hide()
+        Howto.Show()
+    End Sub
+
+    Private Sub lblExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblExit.Click
+        End
+    End Sub
+
+    Private Sub lblDesign_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblDesign.Click
         Dim Design_Level As New Level_Design
         Me.Hide()
         Design_Level.Show()
+    End Sub
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblHowTo.Click
+        Dim Howto As New Howto
+        Me.Hide()
+        Howto.Show()
     End Sub
 End Class

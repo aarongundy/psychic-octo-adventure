@@ -23,7 +23,6 @@ Partial Class Level
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Level))
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnMainMenu = New System.Windows.Forms.Button()
@@ -31,19 +30,17 @@ Partial Class Level
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnStart = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.AxWindowsMediaPlayer2 = New AxWMPLib.AxWindowsMediaPlayer()
-        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.lblTimer = New System.Windows.Forms.Label()
+        Me.lblCountdown = New System.Windows.Forms.Label()
         Me.LblCharacter = New System.Windows.Forms.Label()
         Me.Lbl_Master = New System.Windows.Forms.Label()
-        Me.imgStartImage = New System.Windows.Forms.PictureBox()
         Me.Timer = New System.Windows.Forms.Timer(Me.components)
         Me.CountdownTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Mover = New System.Windows.Forms.Timer(Me.components)
-        Me.lblTimer = New System.Windows.Forms.Label()
-        Me.lblCountdown = New System.Windows.Forms.Label()
+        Me.MovingTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.imgStartImage = New System.Windows.Forms.PictureBox()
+        Me.lblLevel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgStartImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,7 +51,7 @@ Partial Class Level
         Me.btnBack.Location = New System.Drawing.Point(74, 555)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(75, 23)
-        Me.btnBack.TabIndex = 8
+        Me.btnBack.TabIndex = 1
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = False
         '
@@ -65,7 +62,7 @@ Partial Class Level
         Me.btnNext.Location = New System.Drawing.Point(398, 555)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(75, 23)
-        Me.btnNext.TabIndex = 11
+        Me.btnNext.TabIndex = 4
         Me.btnNext.Text = "Next Problem"
         Me.btnNext.UseVisualStyleBackColor = False
         '
@@ -76,7 +73,7 @@ Partial Class Level
         Me.btnMainMenu.Location = New System.Drawing.Point(317, 555)
         Me.btnMainMenu.Name = "btnMainMenu"
         Me.btnMainMenu.Size = New System.Drawing.Size(75, 23)
-        Me.btnMainMenu.TabIndex = 10
+        Me.btnMainMenu.TabIndex = 3
         Me.btnMainMenu.Text = "Main Menu"
         Me.btnMainMenu.UseVisualStyleBackColor = False
         '
@@ -87,7 +84,7 @@ Partial Class Level
         Me.btnNewGame.Location = New System.Drawing.Point(155, 555)
         Me.btnNewGame.Name = "btnNewGame"
         Me.btnNewGame.Size = New System.Drawing.Size(75, 23)
-        Me.btnNewGame.TabIndex = 9
+        Me.btnNewGame.TabIndex = 2
         Me.btnNewGame.Text = "New Game"
         Me.btnNewGame.UseVisualStyleBackColor = False
         '
@@ -108,15 +105,14 @@ Partial Class Level
         Me.btnStart.Location = New System.Drawing.Point(236, 555)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(75, 23)
-        Me.btnStart.TabIndex = 7
+        Me.btnStart.TabIndex = 0
         Me.btnStart.Text = "Start"
         Me.btnStart.UseVisualStyleBackColor = False
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.lblLevel)
         Me.Panel1.Controls.Add(Me.lblTimer)
-        Me.Panel1.Controls.Add(Me.AxWindowsMediaPlayer2)
-        Me.Panel1.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Panel1.Controls.Add(Me.lblCountdown)
         Me.Panel1.Controls.Add(Me.LblCharacter)
         Me.Panel1.Controls.Add(Me.Lbl_Master)
@@ -125,63 +121,6 @@ Partial Class Level
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(500, 500)
         Me.Panel1.TabIndex = 12
-        '
-        'AxWindowsMediaPlayer2
-        '
-        Me.AxWindowsMediaPlayer2.Enabled = True
-        Me.AxWindowsMediaPlayer2.Location = New System.Drawing.Point(335, 262)
-        Me.AxWindowsMediaPlayer2.Name = "AxWindowsMediaPlayer2"
-        Me.AxWindowsMediaPlayer2.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer2.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer2.Size = New System.Drawing.Size(75, 23)
-        Me.AxWindowsMediaPlayer2.TabIndex = 16
-        '
-        'AxWindowsMediaPlayer1
-        '
-        Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(128, 262)
-        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
-        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(75, 23)
-        Me.AxWindowsMediaPlayer1.TabIndex = 15
-        '
-        'LblCharacter
-        '
-        Me.LblCharacter.BackColor = System.Drawing.Color.Blue
-        Me.LblCharacter.Location = New System.Drawing.Point(60, 60)
-        Me.LblCharacter.Name = "LblCharacter"
-        Me.LblCharacter.Size = New System.Drawing.Size(20, 20)
-        Me.LblCharacter.TabIndex = 3
-        Me.LblCharacter.Visible = False
-        '
-        'Lbl_Master
-        '
-        Me.Lbl_Master.BackColor = System.Drawing.Color.Lime
-        Me.Lbl_Master.Location = New System.Drawing.Point(50, 50)
-        Me.Lbl_Master.Name = "Lbl_Master"
-        Me.Lbl_Master.Size = New System.Drawing.Size(40, 40)
-        Me.Lbl_Master.TabIndex = 2
-        Me.Lbl_Master.Text = "Label1"
-        Me.Lbl_Master.Visible = False
-        '
-        'imgStartImage
-        '
-        Me.imgStartImage.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Start_Screen
-        Me.imgStartImage.Location = New System.Drawing.Point(0, 0)
-        Me.imgStartImage.Name = "imgStartImage"
-        Me.imgStartImage.Size = New System.Drawing.Size(500, 500)
-        Me.imgStartImage.TabIndex = 4
-        Me.imgStartImage.TabStop = False
-        '
-        'Timer
-        '
-        '
-        'CountdownTimer
-        '
-        Me.CountdownTimer.Interval = 1000
-        '
-        'Mover
-        '
-        Me.Mover.Interval = 500
         '
         'lblTimer
         '
@@ -203,6 +142,60 @@ Partial Class Level
         Me.lblCountdown.TabIndex = 14
         Me.lblCountdown.Text = "Countdown: 3"
         '
+        'LblCharacter
+        '
+        Me.LblCharacter.BackColor = System.Drawing.Color.Blue
+        Me.LblCharacter.Location = New System.Drawing.Point(60, 60)
+        Me.LblCharacter.Name = "LblCharacter"
+        Me.LblCharacter.Size = New System.Drawing.Size(20, 20)
+        Me.LblCharacter.TabIndex = 3
+        Me.LblCharacter.Visible = False
+        '
+        'Lbl_Master
+        '
+        Me.Lbl_Master.BackColor = System.Drawing.Color.Lime
+        Me.Lbl_Master.Location = New System.Drawing.Point(50, 50)
+        Me.Lbl_Master.Name = "Lbl_Master"
+        Me.Lbl_Master.Size = New System.Drawing.Size(40, 40)
+        Me.Lbl_Master.TabIndex = 2
+        Me.Lbl_Master.Text = "Label1"
+        Me.Lbl_Master.Visible = False
+        '
+        'Timer
+        '
+        '
+        'CountdownTimer
+        '
+        Me.CountdownTimer.Interval = 1000
+        '
+        'Mover
+        '
+        Me.Mover.Interval = 600
+        '
+        'MovingTimer
+        '
+        Me.MovingTimer.Interval = 400
+        '
+        'imgStartImage
+        '
+        Me.imgStartImage.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Start_Screen
+        Me.imgStartImage.Location = New System.Drawing.Point(0, 0)
+        Me.imgStartImage.Name = "imgStartImage"
+        Me.imgStartImage.Size = New System.Drawing.Size(500, 500)
+        Me.imgStartImage.TabIndex = 4
+        Me.imgStartImage.TabStop = False
+        '
+        'lblLevel
+        '
+        Me.lblLevel.AutoSize = True
+        Me.lblLevel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLevel.Location = New System.Drawing.Point(201, 0)
+        Me.lblLevel.Name = "lblLevel"
+        Me.lblLevel.Size = New System.Drawing.Size(64, 25)
+        Me.lblLevel.TabIndex = 18
+        Me.lblLevel.Text = "Level"
+        Me.lblLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Level
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -215,13 +208,12 @@ Partial Class Level
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Level"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Level"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgStartImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -234,8 +226,6 @@ Partial Class Level
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnStart As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents AxWindowsMediaPlayer2 As AxWMPLib.AxWindowsMediaPlayer
-    Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
     Friend WithEvents LblCharacter As System.Windows.Forms.Label
     Friend WithEvents Lbl_Master As System.Windows.Forms.Label
     Friend WithEvents imgStartImage As System.Windows.Forms.PictureBox
@@ -244,4 +234,6 @@ Partial Class Level
     Friend WithEvents Mover As System.Windows.Forms.Timer
     Friend WithEvents lblTimer As System.Windows.Forms.Label
     Friend WithEvents lblCountdown As System.Windows.Forms.Label
+    Friend WithEvents MovingTimer As System.Windows.Forms.Timer
+    Friend WithEvents lblLevel As System.Windows.Forms.Label
 End Class

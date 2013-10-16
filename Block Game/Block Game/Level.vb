@@ -6,16 +6,20 @@ Public Class Level
     Dim addFile As System.IO.Stream
     Dim Block(8, 8) As Boolean
     Public Blinking(8, 8) As Boolean
+    Public DoubleJump(8, 8) As Boolean
     Dim checkNumber, x, y As Integer
     Dim levelCheck As Integer = -1
     Dim startingSquare, winningSquare, time As Integer
     Dim count As Integer = 3
     Dim timecount As Double = 0
     Dim trigger As Integer = 1
+    Dim num As Integer
+    Dim lastblink As Integer
 
     Private Sub Level_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = "Level " & userlevel
 
+        lblLevel.Text = "Level " & userlevel
         y = LblCharacter.Top \ 50
         x = LblCharacter.Left \ 50
 
@@ -91,11 +95,11 @@ Public Class Level
         Me.BackColor = backgroundColor
         Me.ForeColor = textColor
 
-        Me.AxWindowsMediaPlayer1.Visible = False
-        Me.AxWindowsMediaPlayer2.Visible = False
-        Me.AxWindowsMediaPlayer1.URL = background
-        Me.AxWindowsMediaPlayer2.settings.volume = 10
-        Me.AxWindowsMediaPlayer1.settings.volume = 100
+        'Me.AxWindowsMediaPlayer1.Visible = False
+        'Me.AxWindowsMediaPlayer2.Visible = False
+        'Me.AxWindowsMediaPlayer1.URL = background
+        'Me.AxWindowsMediaPlayer2.settings.volume = 10
+        'Me.AxWindowsMediaPlayer1.settings.volume = 100
     End Sub
 
     Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click
@@ -247,7 +251,36 @@ Public Class Level
                     Lbl_Array(i).Visible = False
                     Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
                 Next
-            Case 6 : Level_6()
+            Case 6
+                For i = 1 To 26
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 31 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 42 To 42
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 47 To 47
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 52 To 53
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 57 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
             Case 7
                 For i = 1 To 6
                     Lbl_Array(i).Visible = False
@@ -259,7 +292,36 @@ Public Class Level
                     Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
                 Next
             Case 8
-                
+
+                For i = 3 To 8
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 11 To 16
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 19 To 24
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 27 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 51 To 56
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 59 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
             Case 9
                 For i = 3 To 6
                     Lbl_Array(i).Visible = False
@@ -270,7 +332,71 @@ Public Class Level
                     Lbl_Array(i).Visible = False
                     Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
                 Next
-            Case 10 : level_10()
+            Case 10
+                For i = 3 To 3
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 11 To 11
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 14 To 15
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 19 To 19
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 22 To 23
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 27 To 27
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 30 To 31
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 38 To 39
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 47
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 51 To 51
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 54 To 55
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 59 To 59
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 62 To 63
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
             Case 11
                 For i = 11 To 14
                     Lbl_Array(i).Visible = False
@@ -296,8 +422,86 @@ Public Class Level
                     Lbl_Array(i).Visible = False
                     Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
                 Next
-            Case 12 : level_12()
-            Case 13 : level_13()
+            Case 12
+                For i = 1 To 12
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 15 To 18
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 23 To 29
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 31 To 35
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 39 To 42
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 47 To 50
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 55 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 13
+                For i = 10 To 11
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 14 To 15
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 25 To 27
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 33 To 34
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 37 To 37
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 39 To 42
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 44 To 45
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 47 To 50
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 55 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
             Case 14 : level_14()
             Case 15
                 For i = 19 To 22
@@ -319,7 +523,41 @@ Public Class Level
                     Lbl_Array(i).Visible = False
                     Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
                 Next
-            Case 16 : level_16()
+            Case 16
+                For i = 15 To 15
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 21 To 22
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 29 To 30
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 35 To 36
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 43 To 44
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 49 To 51
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 57 To 57
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
             Case 17
                 For i = 1 To 32
                     Lbl_Array(i).Visible = False
@@ -330,29 +568,839 @@ Public Class Level
                     Lbl_Array(i).Visible = False
                     Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
                 Next
-            Case 18 : level_18()
-            Case 19 : level_19()
-            Case 20 : level_20()
-            Case 21 : level_21()
-            Case 22 : level_22()
-            Case 23 : level_23()
-            Case 24 : level_24()
-            Case 25 : level_25()
-            Case 26 : level_26()
-            Case 27 : level_27()
-            Case 28 : level_28()
-            Case 29 : level_29()
-            Case 30 : level_30()
-            Case 31 : level_31()
-            Case 32 : level_32()
-            Case 33 : level_33()
-            Case 34 : level_34()
-            Case 35 : level_35()
-            Case 36 : level_36()
-            Case 37 : level_37()
-            Case 38 : level_38()
-            Case 39 : level_39()
-            Case 40 : level_40()
+            Case 18
+                For i = 1 To 18
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 24 To 24
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 28 To 28
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 32 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 36 To 36
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 41 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 19
+                For i = 12 To 14
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 20 To 22
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 28 To 30
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 34 To 34
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 36 To 38
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 44 To 46
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 49 To 54
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 57 To 62
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 20
+                For i = 1 To 27
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 32 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 41 To 44
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 49 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 21
+                For i = 10 To 15
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 18 To 19
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 26 To 29
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 34 To 38
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 42 To 46
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 48 To 48
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 50 To 54
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 56 To 56
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 64 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 22
+                For i = 6 To 8
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 10 To 10
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 14 To 16
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 18 To 18
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 22 To 24
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 26 To 26
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 30 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 34 To 34
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 48
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 50 To 50
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 54 To 56
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 62 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 23
+
+                For i = 1 To 25
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 35 To 39
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 43 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                startingSquare = 32
+                winningSquare = 40
+
+                Blinking(3, 4) = True
+                Blinking(4, 4) = True
+                Blinking(6, 4) = True
+                Blinking(7, 4) = True
+                Blinking(2, 5) = True
+            Case 24
+                For i = 1 To 25
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 32 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 44 To 45
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 47 To 49
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 52 To 53
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 56 To 57
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 64 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+
+            Case 25
+                For i = 1 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 41 To 43
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 45 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 26
+                For i = 1 To 1
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 5 To 9
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 11 To 17
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 19 To 25
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 29 To 33
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 35 To 41
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 43 To 49
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 51 To 57
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 59 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 27
+                For i = 1 To 2
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 8 To 10
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 12 To 12
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 14 To 14
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 16 To 18
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 21 To 21
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 24 To 26
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 28 To 28
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 30 To 30
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 32 To 34
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 40 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 28
+                For i = 1 To 9
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 16 To 17
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 19 To 20
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 22 To 25
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 27 To 28
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 30 To 33
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 35 To 36
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 38 To 41
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 43 To 44
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 49
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 54 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 29
+                For i = 10 To 10
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 19 To 19
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 28 To 28
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 37 To 37
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 46
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 55 To 55
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 30
+                For i = 1 To 24
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 29 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 49 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 31
+                For i = 14 To 20
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 22 To 28
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 30 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 38 To 39
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 41 To 44
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 47
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 49 To 52
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 54 To 55
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 32
+                For i = 10 To 15
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 18 To 23
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 26 To 31
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 42 To 46
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 50 To 55
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 33
+                For i = 1 To 26
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 28 To 28
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 30 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 41 To 43
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 45 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 34
+                For i = 1 To 3
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 6 To 11
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 14 To 19
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 22 To 24
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 41 To 43
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 51
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 54 To 59
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 62 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 35
+                For i = 9 To 11
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 13 To 14
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 25 To 28
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 30 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 38 To 44
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 51
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 55 To 56
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 61 To 61
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 36
+                For i = 1 To 9
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 13 To 17
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 21 To 24
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 29 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 41 To 41
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 49 To 49
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 57 To 57
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 61 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 37
+                For i = 10 To 13
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 18 To 23
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 26 To 29
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 34 To 39
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 42 To 45
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 50 To 55
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 38
+                For i = 10 To 15
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 18 To 23
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 43 To 43
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 45 To 45
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 47 To 48
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 51 To 56
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 59 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 39
+                For i = 1 To 10
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 13 To 17
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 20 To 25
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 28 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 43 To 43
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 48 To 48
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 56 To 57
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 64 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+            Case 40
+                For i = 1 To 3
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 8 To 11
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 16 To 19
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 24 To 27
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 32 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 40 To 40
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 48 To 48
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 56 To 56
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 64 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
             Case 41 : level_41()
             Case 42 : level_42()
             Case 43 : level_43()
@@ -363,7 +1411,27 @@ Public Class Level
             Case 48 : level_48()
             Case 49 : level_49()
             Case 50 : level_50()
-            Case 51 : level_51()
+            Case 51
+                For i = 1 To 26
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 31 To 32
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 39 To 42
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
+                For i = 46 To 64
+                    Lbl_Array(i).Visible = False
+                    Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True
+                Next
+
             Case 52 : level_52()
             Case 53 : level_53()
             Case 54 : level_54()
@@ -383,6 +1451,15 @@ Public Class Level
             If Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = False Then
                 levelcheck += 1
             End If
+
+            If DoubleJump(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True Then
+                Lbl_Array(i).BackColor = Color.Purple
+                levelCheck += 1
+            End If
+            If i = winningSquare Then
+                Lbl_Array(i).BackColor = Color.Red
+
+            End If
         Next
 
         Label1.Visible = True
@@ -400,7 +1477,7 @@ Public Class Level
             changeColor(LblCharacter.Left \ 50, LblCharacter.Top \ 50)
             count = 3
 
-            Me.AxWindowsMediaPlayer1.URL = moveChar
+            'Me.AxWindowsMediaPlayer1.URL = moveChar
 
             If e.KeyChar = "a" Then
                 e.Handled = True
@@ -429,6 +1506,7 @@ Public Class Level
         If (y * 8 - (8 - x)) = winningSquare And checkNumber = levelcheck Then
             timerEnd()
             If timecount < timeArray(userlevel) Or timeArray(userlevel) = 0 Then
+                MessageBox.Show("You got a new winning time!", "Congrats!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1)
                 timeArray(userlevel) = timecount
                 writeTime()
             End If
@@ -451,13 +1529,20 @@ Public Class Level
             Block(x, y) = True
             Blinking(x, y) = False
             checkNumber += 1
+
+            If DoubleJump(x, y) = True Then                           ' If the square was set as a double then do this 
+                Block(x, y) = False                                   ' make the square appear unhit
+                DoubleJump(x, y) = False                              ' turn the double jump of this square to false
+                Lbl_Array(y * 8 - (8 - x)).Visible = True             ' make the tile visible again
+                Lbl_Array(y * 8 - (8 - x)).BackColor = Color.Lime
+            End If
         End If
     End Sub
 
     Private Sub nextLevel()
         timerEnd()
         userlevel += 1
-        Me.Hide()
+        Me.Close()
         Dim level As New Level
         level.Show()
     End Sub
@@ -540,6 +1625,7 @@ Public Class Level
     Private Sub CountdownTimer_Tick(sender As System.Object, e As System.EventArgs) Handles CountdownTimer.Tick
         lblCountdown.Text = "Countdown: " & count
 
+
         If count = 0 Then
             count = 3
             CountdownTimer.Enabled = False
@@ -551,31 +1637,35 @@ Public Class Level
 
     Private Sub Timer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer.Tick
         timecount += 0.1
-        lblTimer.Text = "Time: 00" & FormatNumber(timecount, 1)
+        lblTimer.Text = "Time: 00" & FormatNumber(timecount, 2)
     End Sub
 
     Private Sub timerBegin()
         CountdownTimer.Enabled = True
         Mover.Enabled = True
         Timer.Enabled = True
+        MovingTimer.Enabled = True
     End Sub
 
     Private Sub timerEnd()
         CountdownTimer.Enabled = False
         Mover.Enabled = False
         Timer.Enabled = False
+        MovingTimer.Enabled = False
     End Sub
 
     Private Sub timerStart()
         CountdownTimer.Start()
         Mover.Start()
         Timer.Start()
+        MovingTimer.Start()
     End Sub
 
     Private Sub timerStop()
         CountdownTimer.Stop()
         Mover.Stop()
         Timer.Stop()
+        MovingTimer.Stop()
     End Sub
 
     Private Sub writeTime()
@@ -585,7 +1675,7 @@ Public Class Level
         addLine = System.IO.File.AppendText("./saved_games/" + userName + "_times.txt")
 
         For i = 1 To 64
-            addLine.WriteLine(timeArray(i))
+            addLine.WriteLine(Format(timeArray(i), "fixed"))
         Next
 
         addLine.Close()
@@ -618,8 +1708,8 @@ Public Class Level
     End Sub
 
     Private Sub level_6()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 35
+        winningSquare = 37
     End Sub
 
     Private Sub level_7()
@@ -628,8 +1718,8 @@ Public Class Level
     End Sub
 
     Private Sub level_8()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 56
+        winningSquare = 48
     End Sub
 
     Private Sub level_9()
@@ -638,8 +1728,8 @@ Public Class Level
     End Sub
 
     Private Sub level_10()
-        winningSquare = 40
-        startingSquare = 32
+        winningSquare = 64
+        startingSquare = 56
     End Sub
 
     Private Sub level_11()
@@ -648,13 +1738,13 @@ Public Class Level
     End Sub
 
     Private Sub level_12()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 18
+        winningSquare = 54
     End Sub
 
     Private Sub level_13()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 50
+        winningSquare = 52
     End Sub
 
     Private Sub level_14()
@@ -668,39 +1758,54 @@ Public Class Level
     End Sub
 
     Private Sub level_16()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 0
+        winningSquare = 58
     End Sub
 
     Private Sub level_17()
         winningSquare = 40
         startingSquare = 32
+
         Blinking(3, 5) = True
     End Sub
 
     Private Sub level_18()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        Blinking(3, 3) = True
     End Sub
 
     Private Sub level_19()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 39
+        winningSquare = 1
+
+        Blinking(2, 6) = True
     End Sub
 
     Private Sub level_20()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        Blinking(5, 4) = True
+        Blinking(3, 5) = True
+        Blinking(5, 6) = True
     End Sub
 
     Private Sub level_21()
+        startingSquare = 19
         winningSquare = 40
-        startingSquare = 32
+
+        DoubleJump(7, 4) = True
+        Blinking(2, 8) = True
     End Sub
 
     Private Sub level_22()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        Blinking(7, 5) = True
+        Blinking(2, 6) = True
     End Sub
 
     Private Sub level_23()
@@ -709,88 +1814,228 @@ Public Class Level
     End Sub
 
     Private Sub level_24()
-        winningSquare = 40
-        startingSquare = 32
+
+        startingSquare = 39
+        winningSquare = 58
+
+        Blinking(7, 5) = True
+        Blinking(6, 6) = True
+        Blinking(2, 7) = True
+        Blinking(4, 8) = True
     End Sub
 
     Private Sub level_25()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        DoubleJump(4, 5) = True
     End Sub
 
     Private Sub level_26()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 57
+        winningSquare = 4
+
+        DoubleJump(2, 4) = True
+        DoubleJump(3, 4) = True
+        DoubleJump(2, 6) = True
+        DoubleJump(2, 7) = True
     End Sub
 
     Private Sub level_27()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 2
+        winningSquare = 4
+
+        DoubleJump(5, 1) = True
+        DoubleJump(3, 3) = True
+        DoubleJump(7, 3) = True
+        DoubleJump(5, 5) = True
     End Sub
 
     Private Sub level_28()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 9
+        winningSquare = 11
+
+        DoubleJump(5, 2) = True
+        DoubleJump(6, 2) = True
+        DoubleJump(5, 3) = True
+        DoubleJump(5, 4) = True
+        DoubleJump(5, 5) = True
+        DoubleJump(5, 6) = True
+
     End Sub
 
     Private Sub level_29()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 0
+        winningSquare = 2
+
+        DoubleJump(3, 1) = True
+        DoubleJump(7, 1) = True
+        DoubleJump(1, 3) = True
+        DoubleJump(6, 4) = True
+        DoubleJump(3, 5) = True
+        DoubleJump(6, 8) = True
     End Sub
 
     Private Sub level_30()
-        winningSquare = 40
+
         startingSquare = 32
+        winningSquare = 40
+
+        DoubleJump(2, 4) = True
+        Blinking(2, 5) = True
+        DoubleJump(4, 5) = True
+        DoubleJump(2, 6) = True
+        DoubleJump(3, 6) = True
     End Sub
 
     Private Sub level_31()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        DoubleJump(5, 1) = True
+        DoubleJump(6, 1) = True
+        DoubleJump(7, 1) = True
+        DoubleJump(5, 2) = True
+        DoubleJump(5, 3) = True
+        DoubleJump(5, 4) = True
+        DoubleJump(5, 5) = True
+        DoubleJump(2, 8) = True
+        DoubleJump(3, 8) = True
+        DoubleJump(4, 8) = True
+        DoubleJump(5, 8) = True
     End Sub
 
     Private Sub level_32()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        Blinking(1, 1) = True
+        DoubleJump(4, 1) = True
+        DoubleJump(5, 1) = True
+        DoubleJump(1, 2) = True
+        DoubleJump(1, 3) = True
+        DoubleJump(1, 5) = True
+        Blinking(3, 5) = True
+        DoubleJump(4, 5) = True
+        DoubleJump(5, 5) = True
+        Blinking(7, 5) = True
+        Blinking(1, 8) = True
     End Sub
 
     Private Sub level_33()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        Blinking(3, 4) = True
+        Blinking(5, 4) = True
+        Blinking(2, 5) = True
+        DoubleJump(3, 5) = True
+        DoubleJump(4, 5) = True
+        DoubleJump(5, 5) = True
+        Blinking(6, 5) = True
+        Blinking(4, 6) = True
+
     End Sub
 
     Private Sub level_34()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        DoubleJump(5, 4) = True
+        DoubleJump(5, 5) = True
     End Sub
 
     Private Sub level_35()
-        winningSquare = 40
-        startingSquare = 32
+        startingSquare = 16
+        winningSquare = 64
+
+        DoubleJump(2, 1) = True
+        DoubleJump(3, 1) = True
+        DoubleJump(4, 1) = True
+        DoubleJump(5, 1) = True
+        DoubleJump(6, 1) = True
+        DoubleJump(7, 1) = True
+        Blinking(5, 4) = True
+        DoubleJump(2, 5) = True
+        DoubleJump(3, 5) = True
+        DoubleJump(4, 5) = True
+        DoubleJump(5, 5) = True
+        Blinking(5, 6) = True
+        DoubleJump(4, 7) = True
+        DoubleJump(5, 7) = True
+        DoubleJump(2, 8) = True
+        DoubleJump(3, 8) = True
+        DoubleJump(4, 8) = True
     End Sub
 
     Private Sub level_36()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 58
+
+        Blinking(3, 2) = True
+        DoubleJump(2, 3) = True
+        Blinking(3, 3) = True
+        DoubleJump(2, 4) = True
+        Blinking(3, 6) = True
+        Blinking(3, 7) = True
     End Sub
 
     Private Sub level_37()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 41
+
+        DoubleJump(7, 2) = True
+        DoubleJump(7, 4) = True
+        DoubleJump(7, 6) = True
+        DoubleJump(8, 2) = True
+        DoubleJump(8, 4) = True
+        DoubleJump(8, 6) = True
+        Blinking(8, 3) = True
+        Blinking(8, 5) = True
+        Blinking(8, 7) = True
     End Sub
 
     Private Sub level_38()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        Blinking(2, 1) = True
+        Blinking(3, 1) = True
+        Blinking(6, 1) = True
+        Blinking(7, 1) = True
+        Blinking(4, 4) = True
+        DoubleJump(5, 4) = True
+        Blinking(6, 4) = True
+        Blinking(7, 4) = True
+        DoubleJump(4, 5) = True
+        DoubleJump(5, 5) = True
+        DoubleJump(6, 5) = True
     End Sub
 
     Private Sub level_39()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        DoubleJump(3, 2) = True
+        Blinking(4, 2) = True
+        DoubleJump(3, 3) = True
+        DoubleJump(2, 5) = True
+        Blinking(7, 5) = True
+        Blinking(1, 6) = True
     End Sub
 
     Private Sub level_40()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 63
+
+        DoubleJump(5, 2) = True
+        DoubleJump(6, 3) = True
+        DoubleJump(1, 6) = True
+        DoubleJump(1, 7) = True
+        DoubleJump(5, 7) = True
+        DoubleJump(6, 7) = True
+        DoubleJump(7, 3) = True
+        DoubleJump(5, 1) = True
     End Sub
 
     Private Sub level_41()
@@ -834,8 +2079,12 @@ Public Class Level
     End Sub
 
     Private Sub level_49()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 40
+
+        Blinking(2, 4) = True
+        DoubleJump(2, 4) = True
+
     End Sub
 
     Private Sub level_50()
@@ -844,8 +2093,12 @@ Public Class Level
     End Sub
 
     Private Sub level_51()
-        winningSquare = 40
         startingSquare = 32
+        winningSquare = 29
+
+        Blinking(4, 4) = True
+        DoubleJump(4, 4) = True
+
     End Sub
 
     Private Sub level_52()
@@ -912,5 +2165,120 @@ Public Class Level
         winningSquare = 40
         startingSquare = 32
         btnNext.Enabled = False
+    End Sub
+
+    Private Sub MovingTimer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MovingTimer.Tick
+        If lastblink > 0 Then
+            Lbl_Array(lastblink).Visible = True
+            Block(Lbl_Array(lastblink).Left \ 50, Lbl_Array(lastblink).Top \ 50) = False
+        End If
+        
+
+        If num = 64 Then
+            num = 1
+        Else
+            num += 1
+        End If
+
+        Select Case userlevel
+            Case 1
+            Case 2
+            Case 3
+            Case 4
+            Case 5
+            Case 6
+            Case 7
+            Case 8
+            Case 9
+            Case 10
+            Case 11
+            Case 12
+            Case 13
+            Case 14
+            Case 15
+            Case 16
+            Case 17
+            Case 18
+            Case 19
+            Case 20
+            Case 21
+            Case 22
+            Case 23
+            Case 24
+            Case 25
+            Case 26
+            Case 27
+            Case 28
+            Case 29
+            Case 30
+            Case 31
+            Case 32
+            Case 33
+            Case 34
+            Case 35
+            Case 36
+            Case 37
+            Case 38
+            Case 39
+            Case 40
+            Case 41
+            Case 42
+            Case 43
+            Case 44
+            Case 45
+            Case 46
+            Case 47
+            Case 48
+            Case 49
+            Case 50
+            Case 51
+            Case 52
+            Case 53
+            Case 54
+            Case 55
+            Case 56
+            Case 57
+            Case 58
+            Case 59
+            Case 60
+            Case 61
+            Case 62
+            Case 63
+            Case 64
+                For i = 1 To 64
+                    'If Block(Lbl_Array(i).Left \ 50, Lbl_Array(i).Top \ 50) = True Then
+                    '    Lbl_Array(i).Visible = True
+                    'End If
+
+                Next
+
+                If Block(Lbl_Array(num).Left \ 50, Lbl_Array(num).Top \ 50) = True Then
+                    Do Until Block(Lbl_Array(num).Left \ 50, Lbl_Array(num).Top \ 50) = False
+                        num += 1
+                    Loop
+                End If
+
+                lastblink = num
+
+                Lbl_Array(num).Visible = False
+                Block(Lbl_Array(num).Left \ 50, Lbl_Array(num).Top \ 50) = True
+        End Select
+
+        'For r = 1 To 8
+        '    For c = 1 To 8
+        '        If Blinking(c, r) = False Then
+        '            Lbl_Array(r * 8 - (8 - c)).Visible = False
+        '            Block(c, r) = True
+        '        End If
+        '    Next
+        'Next
+        'For r = 1 To 8
+        '    For c = 1 To 8
+        '        If Blinking(c, r) = True Then
+        '            Lbl_Array(r * 8 - (8 - c)).Visible = False
+        '            Block(c, r) = True
+        '        End If
+        '    Next
+        'Next
     End Sub
 End Class
